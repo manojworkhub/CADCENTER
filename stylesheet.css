@@ -1,0 +1,3202 @@
+body {
+
+    /* background-color: var(--bodycolr2); */
+
+}
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+:root {
+    --wordcolor2: rgb(59, 0, 0);
+    --wordcolor: #000000;
+    --fontFORhead: Arial, Helvetica, sans-serif;
+    --bghamcolor: linear-gradient(90deg, rgb(66, 66, 66) 0%, rgb(89, 89, 89) 35%, rgb(66, 66, 66) 100%);
+    --mediaNAVbgcolor: rgb(190, 190, 190);
+    --bgcolor: #ffffff;
+    --hometitlebgcolor: #ffffff;
+    --bodycolr2: #005252;
+    --lettershadow: 0px 0px 3px #ffffff;
+    --lettershadowblack: 0px 0px 11px #000000;
+    --backgroundcolor: linear-gradient(68.4deg, rgba(248, 182, 204, 1) 0.5%, rgba(192, 198, 230, 1) 49%, rgba(225, 246, 240, 1) 99.8%);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 100px;
+    width: 100%;
+    height: 60px;
+    background: var(--bgcolor);
+  
+    position: fixed;
+  
+    border-bottom: 8px solid var(--hometitlebgcolor);
+    z-index: 600;
+
+}
+
+/* hambar creation */
+.hambar div {
+    width: 40px;
+    height: 5px;
+    margin: 10px 0;
+    border-radius: 25px;
+    background: var(--bghamcolor);
+    transition: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    display: none;
+
+}
+
+/* hambar convert into x */
+
+.change .bar1 {
+    transform: translate(0, 15px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -15px) rotate(45deg);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: var(--fontFORhead);
+    font-weight: bolder;
+
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.50rem;
+    text-align: center;
+    letter-spacing: 5px;
+    padding: 0 20px;
+    line-height: 50px;
+    color: var(--wordcolor);
+    text-shadow: var(--lettershadow);
+}
+
+nav a.active {
+
+    width: auto;
+    /* background: var(--mediaNAVbgcolor); */
+    position: relative;
+    z-index: -1;
+    border-radius: 1vw 1vw 0 0;
+
+
+
+}
+
+nav a.active::before {
+    content: "";
+    position: absolute;
+
+    top: 35px;
+    left: -20px;
+    width: 20px;
+    height: 20px;
+    background: var(--bgcolor);
+    border-radius: 0 0 20px 0;
+
+}
+
+nav a.active::after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    right: -20px;
+    width: 20px;
+    height: 20px;
+    background: var(--bgcolor);
+    border-radius: 0 0 0 20px;
+
+}
+
+/* nav a.active::before {
+    border-radius: 0 0 20px 0;
+    box-shadow: 5px 5px 0 2px var(--hometitlebgcolor);
+}
+
+nav a.active::after {
+    border-radius: 0 0 0 20px;
+    box-shadow: -5px 5px 0 2px var(--hometitlebgcolor);
+} */
+
+.logo {
+    background-image: url(./CADDIMG/);
+    filter: drop-shadow(-2px -0px 3px #000000);
+    position: relative;
+    left: 200px;
+    cursor: pointer;
+}
+
+
+#dropdown {
+    transition: all 0.1s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    position: fixed;
+    z-index: 100;
+}
+
+.custom{
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    z-index: -1;
+    line-height: 0;
+
+}
+
+
+.custom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 147px;
+    border-top: 8px solid var(--hometitlebgcolor);
+
+}
+
+.custom .shape-fill {
+    fill: var(--hometitlebgcolor);
+}
+
+.listOFcourse {
+
+    position: relative;
+    left: 1200px;
+    bottom: 130px;
+}
+
+.listOFcourse a {
+    text-decoration: none;
+    display: block;
+    line-height: 50px;
+
+    font-size: 25px;
+    font-weight: bold;
+    font-family: var(--fontFORhead);
+    letter-spacing: 1px;
+    color: var(--wordcolor);
+    text-shadow: var(--lettershadow);
+   
+}
+
+.listOFcourse a:hover {
+    width: 320px;
+    border-bottom: 2px solid var(--bgcolor);
+
+
+}
+
+/* section img slider start */
+
+
+/* section one img nxt pre button  */
+.slider-btns {
+    position: absolute;
+    top: 400px;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+    /* background-color: red; */
+
+}
+
+.slider-btns2 {
+    position: absolute;
+    right: 0;
+    top: 400px;
+    transform: translateY(-50%);
+    /* background-color: red; */
+    z-index: 1;
+
+}
+
+.slider-btns #btn-prev {
+    font-size: 3rem;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.082);
+    border: none;
+    color: rgb(255, 255, 255);
+    width: 50px;
+    height: 50px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.slider-btns2 #btn-next {
+    font-size: 3rem;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.082);
+    border: none;
+    color: rgb(255, 255, 255);
+    width: 50px;
+    height: 50px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+#btn-prev {
+    border-radius: 0 25px 25px 0;
+}
+
+#btn-next {
+    border-radius: 25px 0 0 25px;
+}
+
+/* section one start  */
+#s1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fontFORhead);
+}
+
+/* hidding and active the img continer   start*/
+.continer {
+    width: 100%;
+    height: 800px;
+    /* position: relative;
+    bottom: 120px; */
+}
+
+
+.spliceitem,
+.hidden {
+    display: none;
+}
+
+.activeimg {
+    display: block;
+    animation: fade 0.5s;
+    width: 100%;
+    height: 617px;
+}
+
+
+@keyframes fade {
+    0% {
+        opacity: 0.9;
+        transition: all 2s linear;
+    }
+
+    100% {
+        opacity: 1;
+        transition: all 2s linear;
+    }
+
+}
+
+/* hidding and active the img continer   end*/
+
+
+
+
+/* slide 1  */
+.base1 {
+    color: white;
+    width: 100%;
+    height: 680px;
+    background-image: url(./CADDIMG/firstIMGset/11.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: border-box;
+    position: absolute;
+
+}
+
+.base1 h1 {
+
+    font-size: 3.20rem;
+    width: 700px;
+    position: relative;
+    top: 200px;
+    left: 200px;
+    text-shadow: var(--lettershadowblack);
+
+}
+
+
+.base1 h3 {
+    width: 600px;
+    font-size: 3.50rem;
+    font-weight: lighter;
+    position: relative;
+    top: 200px;
+    left: 200px;
+    text-shadow: var(--lettershadowblack);
+    color: gold;
+}
+
+
+.base1 #logo #logoST {
+
+    width: 100px;
+    position: relative;
+    top: 200px;
+    left: 200px;
+    border-right: 4px solid rgb(255, 255, 255);
+    filter: drop-shadow(-2px 2px 7px rgb(0, 0, 0));
+    background-color: green;
+}
+
+.base1 #logo h4 {
+    width: 250px;
+    position: relative;
+    top: 100px;
+    left: 320px;
+    font-size: 40px;
+    text-shadow: -2px 2px 1px rgb(0, 63, 0);
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+/* slide 2 */
+
+.base2 {
+    color: white;
+    width: 100%;
+    height: 680px;
+    background-image: url(./CADDIMG/firstIMGset/12.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+
+.base2 h1 {
+
+    font-size: 3.20rem;
+    width: 700px;
+    position: relative;
+    top: 200px;
+    left: 100px;
+    text-shadow: var(--lettershadowblack);
+
+}
+
+
+.base2 h3 {
+    width: 700px;
+    font-size: 3rem;
+    font-weight: lighter;
+    position: relative;
+    top: 200px;
+    left: 100px;
+    text-shadow: var(--lettershadowblack);
+    color: gold;
+    text-transform: uppercase;
+}
+
+.base2 h2 {
+    width: 700px;
+    font-size: 3rem;
+    font-weight: lighter;
+    position: relative;
+    top: 200px;
+    left: 100px;
+    text-shadow: var(--lettershadowblack);
+    color: rgb(255, 255, 255);
+}
+
+.base2 #imgLOGO {
+    position: relative;
+    left: -30px;
+    top: 200px;
+    width: 200px;
+    transform: translateX(50%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+/* slide2   */
+
+/* slide3 start  */
+.base3 {
+    color: white;
+    width: 100%;
+    height: 680px;
+    background-image: url(./CADDIMG/firstIMGset/13.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.base3 h1 {
+
+    font-size: 3.20rem;
+    width: 800px;
+    position: relative;
+    top: 200px;
+    left: 100px;
+    text-shadow: -2px 2px 3px white;
+    text-transform: uppercase;
+    color: #005252;
+
+}
+
+
+.base3 h3 {
+    width: 700px;
+    font-size: 3rem;
+    font-weight: lighter;
+    position: relative;
+    top: 200px;
+    left: 100px;
+    text-shadow: -2px 2px 3px rgb(0, 0, 0);
+
+    color: gold;
+    text-transform: uppercase;
+}
+
+
+
+
+/* slide 4 */
+
+.base4 {
+    color: white;
+    width: 100%;
+    height: 680px;
+    background-image: url(./CADDIMG/firstIMGset/14.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.base4 h1 {
+
+    font-size: 3.20rem;
+    width: 800px;
+    position: relative;
+    top: 200px;
+    left: 100px;
+    text-shadow: -2px 2px 3px white;
+    text-transform: uppercase;
+    color: #005252;
+
+}
+
+
+.base4 h3 {
+    width: 700px;
+    font-size: 3rem;
+    font-weight: lighter;
+    position: relative;
+    top: 200px;
+    left: 100px;
+    text-shadow: -2px 2px 3px rgb(0, 0, 0);
+
+    color: gold;
+    text-transform: uppercase;
+}
+
+
+
+
+/* artical section   start*/
+article {
+    position: relative;
+    top: -120px;
+}
+
+.container {
+    width: 100%;
+
+    background-image: url(./CADDIMG/section2img/10001.png);
+    background-size: cover;
+    /* background-blend-mode: lighten; */
+    box-shadow: 0px 0px 7px black;
+
+}
+
+
+
+article .base .artBASE1 {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    text-shadow: var(--lettershadow);
+
+}
+
+article .base .artBASE1 .articalDIV1 div h1 {
+    width: 180px;
+    font-size: 2rem;
+    color: var(--wordcolor);
+    font-family: var(--fontFORhead);
+    border-bottom: 2px solid var(--wordcolor);
+    margin: 0 0 20px 0;
+
+}
+
+.articalDIV1 {
+    padding: 0 50px;
+}
+
+article .base .artBASE1 p {
+    width: 600px;
+    margin: 0 400px 0 0;
+    color: var(--wordcolor);
+    font-family: var(--fontFORhead);
+    font-size: 1.50rem;
+    margin: 0 0 20px 0;
+    text-align: justify;
+}
+
+article .base .artBASE1 .articalDIV1 h3 {
+
+    font-size: 2rem;
+    color: var(--wordcolor);
+    font-family: var(--fontFORhead);
+    margin: 0 0 20px 0;
+
+}
+
+article .base .artBASE1 .articalDIV2 {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    /* box-shadow: rgba(244, 244, 244, 0.4) 0px 30px 90px; */
+}
+
+
+article .base .artBASE2 {
+    display: flex;
+    text-align: center;
+    font-family: var(--fontFORhead);
+    color: var(--wordcolor);
+    text-shadow: var(--lettershadow);
+}
+
+article .base .artBASE2 div {
+    padding: 50px;
+}
+
+article .base .artBASE2 div h1 {
+    color: red;
+}
+
+/* card section */
+#cardsection {
+    position: relative;
+    bottom: 50px;
+
+}
+
+#cardname {
+    font-size: 2rem;
+    display: flex;
+    text-shadow: var(--lettershadow);
+    align-items: center;
+    margin: 0 0 0 50px;
+    font-family: var(--fontFORhead);
+    color: var(--wordcolor);
+
+}
+
+#cardname div {
+    width: 1200px;
+    height: 2px;
+    background-color: #c2c2c2;
+
+
+}
+
+
+.CARDcontainer {
+
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 0 auto;
+    background: #000;
+    border-radius: 35px;
+    box-shadow: 0 15px 60px rgba(253, 253, 253, 0.5);
+    font-family: var(--fontFORhead);
+}
+
+.card:hover {
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+
+}
+
+.face {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease-in-out;
+}
+
+.face.back {
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.face.back b {
+    margin: 0;
+    padding: 0;
+}
+
+.face.back .desc {
+    position: relative;
+    bottom: 50px;
+    background-color: rgb(255, 255, 255);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.face.front {
+    transition: 0.5s;
+}
+
+.face.front h1 {
+    margin: 0;
+    padding: 0 10px;
+    font-size: 2rem;
+    color: var(--wordcolor);
+    transition: 0.5s;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+
+}
+
+.card:hover .face.front {
+    height: 60px;
+}
+
+.card:hover .face.front img {
+    border-radius: 0 0 25px 25px;
+}
+
+.card:hover .face.front h1 {
+    opacity: 0;
+}
+
+.card:hover .face.front b {
+    font-size: 2em;
+}
+
+.face.front {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 35px;
+    background: var(--bgcolor);
+    box-shadow: inset 25px 25px 90px #dedede,
+        inset -25px -25px 60px #ffffff;
+
+}
+
+.face.front img {
+    width: 100%;
+
+}
+
+#btn {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    position: relative;
+    top: 50px;
+
+}
+
+.cta {
+    border: none;
+    background: none;
+    cursor: pointer;
+
+}
+
+.cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 30px;
+    font-weight: lighter;
+    padding-right: 15px;
+    text-transform: uppercase;
+    color: var(--wordcolor);
+}
+
+.cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+    fill: var(--wordcolor);
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active svg {
+    transform: scale(0.9);
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: rgb(0, 0, 0);
+    padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--wordcolor);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* card section 2  */
+
+#cardsection2 {
+    position: relative;
+    top: 100px;
+
+
+}
+
+/* comanysection start  */
+#companysection {
+    margin-top: 200px;
+
+    padding: 50px 0;
+
+
+}
+
+#companysection .base {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#companysection .base img {
+    width: 60%;
+    transform: translateX(90px);
+}
+
+/* form section  */
+#formsection .base {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 10px 1px rgb(185, 185, 185);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 100%;
+    padding: 50px;
+    border-radius: 20px;
+    position: relative;
+    background-color: var(--hometitlebgcolor);
+    color: #fff;
+
+    font-family: var(--fontFORhead);
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: var(--wordcolor);
+}
+
+.title::before {
+    width: 18px;
+    height: 18px;
+
+}
+
+.title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+}
+
+.title::before,
+.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: var(--wordcolor);
+}
+
+
+
+
+
+.flex {
+    display: flex;
+    width: 100%;
+    gap: 35px;
+}
+
+.form label {
+    position: relative;
+}
+
+.form label .input {
+    background-color: #ffffff;
+    color: #fff;
+    width: 100%;
+
+    padding: 20px 05px 05px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+}
+
+.form label:nth-child(1) .input {
+    width: 100%;
+}
+
+.form label:nth-child(2) .input {
+    width: 100%;
+}
+
+textarea {
+    background-color: #ffffff;
+    color: #fff;
+    width: 100%;
+    height: 300px;
+    resize: none;
+    padding: 20px 05px 05px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+
+}
+
+.form label textarea+span {
+    color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.form label .input+span {
+
+    color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown+span {
+    top: 12.5px;
+    font-size: 0.9em;
+}
+
+.form label textarea:placeholder-shown+span {
+    top: 12.5px;
+    font-size: 0.9em;
+}
+
+.form label .input:focus+span,
+.form label .input:valid+span {
+    color: #00bfff;
+    top: 0px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.form label textarea:focus+span,
+.form label textarea:valid+span {
+    color: #00bfff;
+    top: 0px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+
+.input {
+    font-size: medium;
+}
+
+#sumitbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.submit {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+
+    background-color: #00bfff;
+
+}
+
+.submit:hover {
+    background-color: #00bfff96;
+    color: #003547;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+#Locations h1 {
+    font-family: var(--fontFORhead);
+    font-size: 1.25rem;
+    width: 400px;
+    /* background-color: red; */
+    text-align: start;
+    text-transform: uppercase;
+    text-shadow: var(--lettershadow);
+}
+
+#Locations iframe {
+
+    /* border-radius: 25px; */
+    margin: 20px 0;
+    /* padding: 50px 0; */
+
+}
+
+#Locations iframe:hover {
+    box-shadow: 0px 0px 11px black;
+}
+
+/* footer section start */
+
+#footer {
+    background: #f7f7f7;
+    padding: 3rem;
+
+    padding-top: 7rem;
+    padding-bottom: 80px;
+    font-family: var(--fontFORhead);
+    background-image: url(./CADDIMG/footer/footerbg.jpg);
+    background-size: cover;
+
+    margin-top: 10px;
+
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-about {
+    width: 400px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links h2 {
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.social-links img {
+    padding-bottom: 25px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--wordcolor);
+}
+
+.social-icons a {
+    font-size: 18px;
+
+    padding: 0.4rem 1rem 0.4rem 1rem;
+    border-radius: 3px;
+
+    margin-right: 18px;
+    color: var(--wordcolor);
+}
+
+.social-icons a:hover {
+    color: rgb(0, 242, 255);
+}
+
+.social-icons a i {
+    box-shadow: rgb(0 0 0 / 8%) 0px 4px 12px;
+    padding: 0.4rem 1rem 0.4rem 1rem;
+    border-radius: 3px;
+    color: var(--wordcolor);
+    font-size: 16px;
+    margin-right: 12px;
+}
+
+li {
+    list-style: none;
+}
+
+.useful-link h2 {
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.useful-link img {
+    padding-bottom: 15px;
+}
+
+.use-links {
+    line-height: 32px;
+}
+
+.use-links li i {
+    font-size: 14px;
+    padding-right: 8px;
+    color: var(--wordcolor);
+}
+
+.use-links li a {
+
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--wordcolor);
+}
+
+.use-links li a:hover {
+    color: #00d9ff;
+}
+
+.address h2 {
+    padding-bottom: 35px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.address img {
+    padding-bottom: 15px;
+}
+
+.address-links li a {
+
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--wordcolor);
+}
+
+.address-links li i {
+    font-size: 16px;
+    padding-right: 8px;
+    color: var(--wordcolor);
+}
+
+.address-links li i:nth-child(1) {
+    padding-top: 9px;
+}
+
+.address-links .address1 {
+    font-weight: 500;
+    font-size: 15px;
+    display: flex;
+}
+
+.address-links {
+    line-height: 32px;
+    color: var(--wordcolor);
+}
+
+.copy-right-sec {
+    padding: 1.8rem;
+    background: #5f5f5f;
+    color: #fff;
+    text-align: center;
+}
+
+.copy-right-sec a {
+    color: #fcd462;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+}
+
+.footerlogo {
+    position: relative;
+    left: 100px;
+    bottom: 20px;
+}
+
+/* footer section end */
+.fixer{
+    width: 375px;
+    height: 200px;
+    /* background-color: red; */
+    position: absolute;
+    top: 7970px;
+    font-family: var(--fontFORhead);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    display: none;
+}
+
+
+
+@media all and (max-width:600px) {
+    .hambar {
+        transform: translateX(-100px);
+    }
+
+    .hambar div {
+        display: block;
+
+    }
+
+    .come {
+        position: absolute;
+        top: 58px;
+        left: 0px;
+    }
+
+    .x {
+
+        transform: translateX(70px);
+        z-index: 2;
+    }
+
+    nav {
+        width: 300px;
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        font-family: var(--fontFORhead);
+        font-weight: bolder;
+        text-align: start;
+        background: var(--bgcolor);
+        padding: 10px 20px;
+        position: absolute;
+        top: 60px;
+        left: -400px;
+        margin: 30px 0 0 0;
+        /* border: 2px solid red; */
+        z-index: 1;
+        transition: all;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+        border-right: 10px solid var(--mediaNAVbgcolor);
+    }
+
+    nav a {
+        width: 300px;
+        height: 50px;
+
+        text-decoration: none;
+        font-size: 1rem;
+
+        letter-spacing: 5px;
+        position: relative;
+        text-align: start;
+        top: -190px;
+        line-height: 50px;
+        color: var(--wordcolor);
+        text-shadow: var(--lettershadow);
+        margin: 0 0 0 100px;
+
+    }
+
+    .logo {
+        background-image: url(./CADDIMG/);
+        filter: drop-shadow(0px 0px 25px #000000);
+        position: relative;
+        left: 150px;
+        cursor: pointer;
+    }
+
+    nav a.active {
+
+        width: 200px;
+        height: 50px;
+        display: block;
+        background: var(--mediaNAVbgcolor);
+
+        position: relative;
+        z-index: -1;
+        border-radius: 20px 0 0 20px;
+
+
+
+    }
+
+    nav a.active::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 175px;
+        width: 20px;
+        height: 20px;
+        background: var(--bgcolor);
+
+        border-radius: 0 0 20px 0;
+
+    }
+
+    nav a.active::after {
+        content: "";
+        position: absolute;
+        top: 50px;
+        right: 5px;
+        width: 20px;
+        height: 20px;
+        background: var(--bgcolor);
+
+        border-radius: 0 20px 0 0;
+
+    }
+
+    nav a.active::before {
+        border-radius: 0 0 20px 0;
+        box-shadow: 5px 5px 0 2px var(--mediaNAVbgcolor);
+
+    }
+
+    nav a.active::after {
+        border-radius: 0 20px 0 0;
+        box-shadow: 5px -5px 0 2px var(--mediaNAVbgcolor);
+
+    }
+
+    #dropdown {
+        transition: all 0s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    }
+
+    .listOFcourse {
+        position: absolute;
+        top: 10px;
+        left: 310px;
+    }
+
+    .listOFcourse a {
+        font-size: 18px;
+        margin: 0;
+        line-height: 37px;
+    }
+
+    .carousel-indicators {
+        position: absolute;
+        top: 290px;
+
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+    }
+
+    /* section one start  */
+    #s1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--fontFORhead);
+
+    }
+
+    /* hidding and active the img continer   start*/
+    .continer {
+        width: 100%;
+        height: 800px;
+        /* position: relative;
+    bottom: 120px; */
+    }
+
+
+    .spliceitem,
+    .hidden {
+        display: none;
+    }
+
+    .activeimg {
+        display: block;
+        animation: fade 0.5s;
+        width: 100%;
+        height: 617px;
+    }
+
+
+    @keyframes fade {
+        0% {
+            opacity: 0.9;
+            transition: all 2s linear;
+        }
+
+        100% {
+            opacity: 1;
+            transition: all 2s linear;
+        }
+
+    }
+
+    /* hidding and active the img continer   end*/
+    /* section img slider start */
+
+
+    /* section one img nxt pre button  */
+    .slider-btns {
+        position: absolute;
+        top: 350px;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: 1;
+        /* background-color: red; */
+
+    }
+
+    .slider-btns2 {
+        position: absolute;
+        right: 0;
+        top: 350px;
+        transform: translateY(-50%);
+        /* background-color: red; */
+        z-index: 1;
+
+    }
+
+    .slider-btns #btn-prev {
+        font-size: 2rem;
+        font-weight: 500;
+        background-color: rgba(0, 0, 0, 0.082);
+        border: none;
+        color: rgb(255, 255, 255);
+        width: 50px;
+        height: 50px;
+        line-height: 30px;
+        cursor: pointer;
+    }
+
+    .slider-btns2 #btn-next {
+        font-size: 2rem;
+        font-weight: 500;
+        background-color: rgba(0, 0, 0, 0.082);
+        border: none;
+        color: rgb(255, 255, 255);
+        width: 50px;
+        height: 50px;
+        line-height: 30px;
+        cursor: pointer;
+    }
+
+    #btn-prev {
+        border-radius: 0 25px 25px 0;
+    }
+
+    #btn-next {
+        border-radius: 25px 0 0 25px;
+    }
+
+
+
+    /* slide 1  */
+    .base1 {
+        color: white;
+        width: 100%;
+        height: 680px;
+        background-image: url(./CADDIMG/firstIMGset/11.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        background-clip: border-box;
+        /* position: absolute;
+    top:0px; */
+        position: relative;
+        bottom: 100px;
+
+    }
+
+    .base1 h1 {
+
+        font-size: 2rem;
+        width: 440px;
+        position: relative;
+        top: 300px;
+        left: 90px;
+        text-shadow: var(--lettershadowblack);
+
+    }
+
+
+    .base1 h3 {
+        width: 440px;
+        font-size: 1.50rem;
+        font-weight: lighter;
+        position: relative;
+        top: 300px;
+        left: 90px;
+        text-shadow: var(--lettershadowblack);
+        color: gold;
+    }
+
+
+    .base1 #logo #logoST {
+
+        width: 50px;
+        position: relative;
+        top: 300px;
+        left: 90px;
+        border-right: 4px solid rgb(255, 255, 255);
+        filter: drop-shadow(-2px 2px 7px rgb(0, 0, 0));
+        background-color: green;
+    }
+
+    .base1 #logo h4 {
+        width: 250px;
+        position: relative;
+        top: 250px;
+        left: 150px;
+        font-size: 20px;
+        text-shadow: -2px 2px 1px rgb(0, 63, 0);
+        text-transform: uppercase;
+        color: rgb(255, 255, 255);
+    }
+
+
+
+
+    /* slide 2 */
+
+    .base2 {
+        color: white;
+        width: 100%;
+        height: 680px;
+        background-image: url(./CADDIMG/firstIMGset/12.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+        top: 80px;
+    }
+
+
+
+
+    .base2 h1 {
+
+        font-size: 1.25rem;
+        width: 440px;
+        position: relative;
+        top: 60px;
+        left: 20px;
+        text-shadow: var(--lettershadow);
+
+    }
+
+
+    .base2 h3 {
+        width: 440px;
+        font-size: 1.25rem;
+        font-weight: lighter;
+        position: relative;
+        top: 60px;
+        left: 20px;
+        text-shadow: var(--lettershadow);
+        color: gold;
+        text-transform: uppercase;
+    }
+
+    .base2 h2 {
+        width: 440px;
+        font-size: 1.50rem;
+        font-weight: lighter;
+        position: relative;
+        top: 60px;
+        left: 20px;
+        text-shadow: var(--lettershadow);
+        color: rgb(255, 255, 255);
+    }
+
+    .base2 #imgLOGO {
+        position: relative;
+        left: -30px;
+        top: 200px;
+        width: 200px;
+        transform: translateX(50%);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+
+    /* slide2   */
+
+    /* slide3 start  */
+    .base3 {
+        color: white;
+        width: 100%;
+        height: 680px;
+        background-image: url(./CADDIMG/firstIMGset/13.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+        top: 20px;
+    }
+
+    .base3 h1 {
+
+        font-size: 1.30rem;
+        width: 440px;
+        position: relative;
+        left: 30px;
+        top: 100px;
+        text-shadow: -2px 2px 3px white;
+        text-transform: uppercase;
+        color: #005252;
+
+    }
+
+
+    .base3 h3 {
+        width: 440px;
+        font-size: 1.50rem;
+        font-weight: lighter;
+        position: relative;
+        left: 30px;
+        top: 100px;
+        text-shadow: -2px 2px 3px rgb(0, 0, 0);
+
+        color: gold;
+        text-transform: uppercase;
+    }
+
+
+
+
+    /* slide 4 */
+
+    .base4 {
+        color: white;
+        width: 100%;
+        height: 680px;
+        background-image: url(./CADDIMG/firstIMGset/14.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+        position: relative;
+        top: 80px;
+    }
+
+    .base4 h1 {
+
+        font-size: 2rem;
+        width: 440px;
+        position: relative;
+        top: 100px;
+        left: 30px;
+        text-shadow: -2px 2px 3px white;
+        text-transform: uppercase;
+        color: #005252;
+
+    }
+
+
+    .base4 h3 {
+        width: 440px;
+        font-size: 1.3rem;
+        font-weight: lighter;
+        position: relative;
+        top: 100px;
+        left: 30px;
+        text-shadow: -2px 2px 3px rgb(0, 0, 0);
+
+        color: gold;
+        text-transform: uppercase;
+    }
+
+
+    .container {
+        width: 100%;
+
+        background-image: url(./CADDIMG/section2img/10001.jpg);
+        background-size: contain;
+        /* background-blend-mode: lighten; */
+        box-shadow: 0px 0px 7px black;
+
+    }
+
+
+
+    article {
+        position: relative;
+        top: -420px;
+    }
+
+    article .base .artBASE1 {
+        display: block;
+        /* padding: 20px; */
+        justify-content: center;
+        align-items: center;
+        text-shadow: var(--lettershadow);
+
+    }
+
+    article .base .artBASE1 .articalDIV1 div h1 {
+        width: 180px;
+        font-size: 2rem;
+        color: var(--wordcolor);
+        font-family: var(--fontFORhead);
+        border-bottom: 2px solid var(--wordcolor);
+        margin: 0 0 20px 0;
+
+    }
+
+    .articalDIV1 {
+        padding: 0 50px;
+    }
+
+    article .base .artBASE1 p {
+        width: 400px;
+        margin: 0 400px 0 0;
+        color: var(--wordcolor);
+        font-family: var(--fontFORhead);
+        font-size: 1.25rem;
+        margin: 0 0 20px 0;
+        text-align: justify;
+    }
+
+    article .base .artBASE1 .articalDIV1 h3 {
+
+        font-size: 2rem;
+        color: var(--wordcolor);
+        font-family: var(--fontFORhead);
+        margin: 0 0 20px 0;
+
+    }
+
+    article .base .artBASE1 .articalDIV2 {
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+    }
+
+    article iframe {
+        width: 100%;
+    }
+
+    article .base .artBASE2 {
+        display: block;
+        text-align: center;
+        font-family: var(--fontFORhead);
+        color: var(--wordcolor);
+        text-shadow: var(--lettershadow);
+    }
+
+    article .base .artBASE2 div {
+        padding: 50px;
+    }
+
+    article .base .artBASE2 div h1 {
+        color: red;
+    }
+
+    #cardsection {
+        position: relative;
+        bottom: 400px;
+        /* overflow: hidden; */
+    }
+
+    .CARDcontainer {
+
+        padding: 100px 0;
+        display: block;
+
+
+    }
+
+    .CARDcontainer .card {
+        margin-top: 150px;
+
+
+    }
+
+    #btn {
+        width: 300px;
+        /* border: 2px solid red; */
+        transform: translate(50%);
+    }
+
+    /* card section 2  */
+
+    #cardsection2 {
+        position: relative;
+        top: -150px;
+
+
+    }
+
+    /* companysection  */
+    #companysection .base img {
+        width: 60%;
+        transform: translateX(25px);
+        position: relative;
+        top: -250px;
+
+    }
+
+    #formsection .base {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0 0 10px 1px rgb(185, 185, 185);
+    }
+
+    #formsection {
+        position: relative;
+        bottom: 200px;
+
+
+    }
+
+    #Locations h1 {
+        /* width: 200px; */
+        padding: 20px;
+    }
+
+    #Locations iframe {
+        padding: 20px;
+    }
+
+    #footer {
+        background: #f7f7f7;
+        padding: 3rem;
+    
+        padding-top: 7rem;
+        padding-bottom: 80px;
+        font-family: var(--fontFORhead);
+        background-image: url(./CADDIMG/footer/mediabg.png);
+        background-size: contain;
+    
+        margin-top: 10px;
+    
+    }
+    .footerlogo{
+        width: 200px;
+    }
+    .col-md-3{
+        margin: 50px 0;
+    }
+    .row {
+        display: block;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .social-links {
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        left: -170px;
+    }
+    .social-icons{
+        position: relative;
+        left: 30px;
+    }
+
+}
+
+@media all and (max-width:430px) {
+   
+    header{
+        width: 430px;
+    }
+    
+    .hambar {
+        transform: translateX(-70px);
+    }
+
+    .hambar div {
+        display: block;
+
+    }
+
+    .come {
+        position: absolute;
+        top: 58px;
+        left: 0px;
+    }
+
+    .x {
+        /* position: absolute; */
+        /* top: 00px; */
+        /* left: 10px; */
+        transform: translateX(-60px);
+        z-index: 2;
+    }
+
+    nav {
+        width: 280px;
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        font-family: var(--fontFORhead);
+        font-weight: bolder;
+        text-align: start;
+        background: var(--bgcolor);
+        padding: 10px 20px;
+        position: absolute;
+        top: 60px;
+        left: -400px;
+        z-index: 1;
+        transition: all;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+        border-right: 10px solid var(--mediaNAVbgcolor);
+    }
+
+    nav a {
+        width: 300px;
+        height: 50px;
+
+        text-decoration: none;
+        font-size: 19px;
+
+        letter-spacing: 2px;
+        position: relative;
+        top: -300px;
+        text-align: start;
+
+        line-height: 50px;
+        color: var(--wordcolor);
+        text-shadow: 0px 0px 10px #000000;
+        margin: 0 0 0 100px;
+
+    }
+
+    .logo {
+        background-image: url(./CADDIMG/);
+        filter: drop-shadow(0px 0px 25px #000000);
+        position: relative;
+        left: 50px;
+        cursor: pointer;
+
+    }
+
+    nav a.active {
+
+        width: 185px;
+        height: 50px;
+        display: block;
+        background: var(--mediaNAVbgcolor);
+
+        position: relative;
+        z-index: -1;
+        border-radius: 20px 0 0 20px;
+
+
+
+    }
+
+    nav a.active::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 157px;
+        width: 20px;
+        height: 20px;
+        background: var(--bgcolor);
+
+        border-radius: 0 0 20px 0;
+
+    }
+
+    nav a.active::after {
+        content: "";
+        position: absolute;
+        top: 50px;
+        right: 8px;
+        width: 20px;
+        height: 20px;
+        background: var(--bgcolor);
+
+        border-radius: 0 20px 0 0;
+
+    }
+
+    nav a.active::before {
+        border-radius: 0 0 20px 0;
+        box-shadow: 5px 5px 0 2px var(--mediaNAVbgcolor);
+
+    }
+
+    nav a.active::after {
+        border-radius: 0 20px 0 0;
+        box-shadow: 5px -5px 0 2px var(--mediaNAVbgcolor);
+
+    }
+
+    #dropdown {
+        transition: all 0s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    }
+
+    .listOFcourse {
+        position: absolute;
+        top: 10px;
+        left: 210px;
+    }
+
+    .listOFcourse a {
+        font-size: 18px;
+        margin: 0;
+color: var(--wordcolor);
+text-shadow: var(--lettershadow);
+        line-height: 30px;
+    }
+
+    .carousel-indicators {
+        position: absolute;
+        top: 200px;
+
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+    }
+
+    /* section one start  */
+    #s1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--fontFORhead);
+
+    }
+
+    /* hidding and active the img continer   start*/
+    .continer {
+        width: 100%;
+        height: 800px;
+        /* position: relative;
+    bottom: 120px; */
+    }
+
+
+    .spliceitem,
+    .hidden {
+        display: none;
+    }
+
+    .activeimg {
+        display: block;
+        animation: fade 0.5s;
+        width: 100%;
+        height: 617px;
+    }
+
+
+    @keyframes fade {
+        0% {
+            opacity: 0.9;
+            transition: all 2s linear;
+        }
+
+        100% {
+            opacity: 1;
+            transition: all 2s linear;
+        }
+
+    }
+
+    /* hidding and active the img continer   end*/
+    /* section img slider start */
+
+
+    /* section one img nxt pre button  */
+    .slider-btns {
+        position: absolute;
+        top: 250px;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: 1;
+        /* background-color: red; */
+
+    }
+
+    .slider-btns2 {
+        position: absolute;
+        right: 0px;
+        top: 250px;
+        transform: translateY(-50%);
+        /* background-color: red; */
+        z-index: 1;
+
+    }
+
+    .slider-btns #btn-prev {
+        font-size: 2rem;
+        font-weight: 500;
+        background-color: rgba(0, 0, 0, 0.082);
+        border: none;
+        color: rgb(255, 255, 255);
+        width: 50px;
+        height: 50px;
+        line-height: 30px;
+        cursor: pointer;
+    }
+
+    .slider-btns2 #btn-next {
+        font-size: 2rem;
+        font-weight: 500;
+        background-color: rgba(0, 0, 0, 0.082);
+        border: none;
+        color: rgb(255, 255, 255);
+        width: 50px;
+        height: 50px;
+        line-height: 30px;
+        cursor: pointer;
+    }
+
+    #btn-prev {
+        border-radius: 0 25px 25px 0;
+    }
+
+    #btn-next {
+        border-radius: 25px 0 0 25px;
+    }
+
+
+
+    /* slide 1  */
+    .base1 {
+        color: white;
+        width: 100%;
+        height: 680px;
+        background-image: url(./CADDIMG/firstIMGset/11.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        background-clip: border-box;
+        /* position: absolute;
+    top:0px; */
+        position: relative;
+        bottom: 150px;
+
+    }
+
+    .base1 h1 {
+
+        font-size: 1.2rem;
+        width: 300px;
+        position: relative;
+        top: 280px;
+        left: 40px;
+        text-shadow: var(--lettershadowblack);
+
+    }
+
+
+    .base1 h3 {
+        width: 300px;
+        font-size: 1rem;
+        font-weight: lighter;
+        position: relative;
+        top: 280px;
+        left: 40px;
+        text-shadow: var(--lettershadowblack);
+        color: gold;
+    }
+
+
+    .base1 #logo #logoST {
+
+        width: 40px;
+        position: relative;
+        top: 280px;
+        left: 40px;
+        border-right: 4px solid rgb(255, 255, 255);
+        filter: drop-shadow(-2px 2px 7px rgb(0, 0, 0));
+        background-color: green;
+    }
+
+    .base1 #logo h4 {
+        width: 250px;
+        position: relative;
+        top: 240px;
+        left: 90px;
+        font-size: 16px;
+        text-shadow: -2px 2px 1px rgb(0, 63, 0);
+        text-transform: uppercase;
+        color: rgb(255, 255, 255);
+    }
+
+
+
+
+    /* slide 2 */
+
+    .base2 {
+        color: white;
+        width: 100%;
+        height: 680px;
+        background-image: url(./CADDIMG/firstIMGset/12.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+        top: 80px;
+    }
+
+
+
+
+    .base2 h1 {
+
+        font-size: .8rem;
+        width: 340px;
+        position: relative;
+        top: 30px;
+        left: 20px;
+        text-shadow: var(--lettershadow);
+
+    }
+
+
+    .base2 h3 {
+        width: 440px;
+        font-size: .9rem;
+        font-weight: lighter;
+        position: relative;
+        top: 30px;
+        left: 20px;
+        text-shadow: var(--lettershadow);
+        color: gold;
+        text-transform: uppercase;
+    }
+
+    .base2 h2 {
+        width: 340px;
+        font-size: 1rem;
+        font-weight: lighter;
+        position: relative;
+        top: 30px;
+        left: 20px;
+        text-shadow: var(--lettershadow);
+        color: rgb(255, 255, 255);
+    }
+
+    .base2 #imgLOGO {
+        position: relative;
+        left: -30px;
+        top: 200px;
+        width: 200px;
+        transform: translateX(50%);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+
+    /* slide2   */
+
+    /* slide3 start  */
+    .base3 {
+        color: white;
+        width: 100%;
+        height: 680px;
+        background-image: url(./CADDIMG/firstIMGset/13.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+        top: 50px;
+    }
+
+    .base3 h1 {
+
+        font-size: 1rem;
+        width: 340px;
+        position: relative;
+        left: 30px;
+        top: 100px;
+        text-shadow: -2px 2px 3px white;
+        text-transform: uppercase;
+        color: #005252;
+
+    }
+
+
+    .base3 h3 {
+        width: 440px;
+        font-size: 1rem;
+        font-weight: lighter;
+        position: relative;
+        left: 30px;
+        top: 100px;
+        text-shadow: -2px 2px 3px rgb(0, 0, 0);
+
+        color: gold;
+        text-transform: uppercase;
+    }
+
+
+
+
+    /* slide 4 */
+
+    .base4 {
+        color: white;
+        width: 100%;
+        height: 680px;
+        background-image: url(./CADDIMG/firstIMGset/14.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+        position: relative;
+        top: 80px;
+    }
+
+    .base4 h1 {
+
+        font-size: 1.5rem;
+        width: 340px;
+        position: relative;
+        top: 60px;
+        left: 30px;
+        text-shadow: -2px 2px 3px white;
+        text-transform: uppercase;
+        color: #005252;
+
+    }
+
+
+    .base4 h3 {
+        width: 300px;
+        font-size: .9rem;
+        font-weight: lighter;
+        position: relative;
+        top: 60px;
+        left: 30px;
+        text-shadow: -2px 2px 3px rgb(0, 0, 0);
+
+        color: gold;
+        text-transform: uppercase;
+    }
+
+
+
+
+
+
+
+
+
+    article {
+        width: 100%;
+        position: relative;
+        top: -490px;
+    }
+
+    .container {
+        width: 100%;
+
+        background-image: url(./CADDIMG/section2img/430.png);
+        background-size: contain;
+        /* background-blend-mode: lighten; */
+        box-shadow: 0px 0px 7px black;
+
+    }
+
+    /* .container {
+        width: 100%;
+        height: 100%;
+     
+        background: var(--hometitlebgcolor);
+        background: radial-gradient(circle,
+                var(--bgcolor),
+                var(--hometitlebgcolor) 10%,
+                rgba(0, 0, 0, 0.226) 0%),
+            radial-gradient(circle at 40px 40px,
+                var(--bgcolor),
+                var(--hometitlebgcolor) 10%,
+                rgba(0, 0, 0, 0) 0%),
+            radial-gradient(circle at 600px 200px,
+                var(--bgcolor),
+                var(--hometitlebgcolor) 16%,
+                rgba(0, 0, 0, 0) 0%),
+            radial-gradient(circle at 800px 100px,
+                var(--bgcolor),
+                var(--hometitlebgcolor) 20%,
+                rgba(0, 0, 0, 0) 0%),
+            radial-gradient(circle at 700px 500px,
+                var(--bgcolor),
+                var(--hometitlebgcolor) 2%,
+                rgba(0, 0, 0, 0.123) 0%),
+            radial-gradient(circle at 200px 400px,
+                var(--bgcolor),
+                var(--hometitlebgcolor) 10%,
+                rgba(0, 0, 0, 0) 0%),
+            radial-gradient(circle at 300px 700px,
+                var(--bgcolor),
+                var(--hometitlebgcolor) 15%,
+                rgba(0, 0, 0, 0) 0%),
+            radial-gradient(circle at 900px 500px,
+                var(--bgcolor),
+                var(--hometitlebgcolor)20%,
+                rgba(0, 0, 0, 0) 0%),
+            radial-gradient(circle at 650px 400px,
+                var(--bgcolor),
+                var(--hometitlebgcolor) 10%,
+                rgba(88, 84, 84, 0) 0%),
+            radial-gradient(circle at 600px 600px,
+                var(--bgcolor),
+                var(--hometitlebgcolor) 10%,
+                rgba(0, 0, 0, 0.363) 0%);
+    } */
+
+    article .base .artBASE1 {
+
+        display: block;
+        /* padding: 20px; */
+        justify-content: center;
+        align-items: center;
+        text-shadow: var(--lettershadow);
+
+    }
+
+    article .base .artBASE1 .articalDIV1 div h1 {
+        width: 180px;
+        font-size: 2rem;
+        color: var(--wordcolor);
+        text-align: center;
+        font-family: var(--fontFORhead);
+        border-bottom: 2px solid white;
+        margin: 0 0 20px 0;
+
+    }
+
+    .articalDIV1 {
+        padding: 0 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    article .base .artBASE1 p {
+        width: 300px;
+        margin: 0 400px 0 0;
+        color: var(--wordcolor);
+        font-family: var(--fontFORhead);
+        font-size: 1.25rem;
+        margin: 0 0 20px 0;
+        text-align: justify;
+    }
+
+    article .base .artBASE1 .articalDIV1 h3 {
+
+        font-size: 1.25rem;
+        color: var(--wordcolor);
+        font-family: var(--fontFORhead);
+        margin: 0 0 20px 0;
+
+    }
+
+    article .base .artBASE1 .articalDIV2 {
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+    }
+
+    article iframe {
+        width: 100%;
+    }
+
+    article .base .artBASE2 {
+        display: block;
+        text-align: center;
+        font-family: var(--fontFORhead);
+        color: var(--wordcolor);
+        text-shadow: var(--lettershadow);
+    }
+
+    article .base .artBASE2 div {
+        padding: 50px;
+    }
+
+    article .base .artBASE2 div h1 {
+        color: red;
+    }
+
+    #btn {
+        width: 300px;
+        /* border: 2px solid red; */
+        transform: translate(20%);
+    }
+
+    #formsection .base {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0 0 10px 1px rgb(185, 185, 185);
+    }
+
+    #Locations h1 {
+        /* width: 200px; */
+        padding: 20px;
+    }
+
+    #Locations iframe {
+        padding: 20px;
+    }
+    #footer {
+        background: #f7f7f7;
+        padding: 3rem;
+    
+        padding-top: 7rem;
+        padding-bottom: 80px;
+        font-family: var(--fontFORhead);
+        background-image: url(./CADDIMG/footer/1000.png);
+        background-size: cover;
+    
+        margin-top: 10px;
+    
+    
+    }
+    .footer-about{
+        width: 380px;
+    }
+    .social-links {
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        left: -120px;
+    }
+    .social-icons{
+        position: relative;
+        left: 30px;
+    }
+    .fixer{
+        width: 430px;
+        height: 200px;
+        /* background-color: red; */
+        position: absolute;
+        padding: 0 20px;
+        top: 7970px;
+        font-family: var(--fontFORhead);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .8rem;
+    }
+
+
+}
+
+@media only screen and (max-width: 414px) {
+  
+header{
+    width: 414px;
+}
+
+    .hambar {
+        transform: translateX(-70px);
+    }
+
+    .hambar div {
+        display: block;
+
+    }
+
+    .come {
+        position: absolute;
+        top: 58px;
+        left: 0px;
+    }
+
+    .x {
+        /* position: absolute; */
+        /* top: 00px; */
+        /* left: 10px; */
+        transform: translateX(-60px);
+        z-index: 2;
+    }
+
+    nav {
+        width: 280px;
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        font-family: var(--fontFORhead);
+        font-weight: bolder;
+        text-align: start;
+        background: var(--bgcolor);
+        padding: 10px 20px;
+        position: absolute;
+        top: 60px;
+        left: -400px;
+        z-index: 1;
+        transition: all;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+        border-right: 10px solid var(--mediaNAVbgcolor);
+    }
+
+    nav a {
+        width: 300px;
+        height: 50px;
+
+        text-decoration: none;
+        font-size: 19px;
+
+        letter-spacing: 2px;
+        position: relative;
+        text-align: start;
+        top: -200px;
+        line-height: 50px;
+        color: var(--wordcolor);
+        text-shadow: var(--lettershadow);
+        margin: 0 0 0 100px;
+
+    }
+
+    .logo {
+        background-image: url(./CADDIMG/);
+        filter: drop-shadow(0px 0px 25px #000000);
+        position: relative;
+        left: 70px;
+        cursor: pointer;
+    }
+
+    nav a.active {
+
+        width: 185px;
+        height: 50px;
+        display: block;
+        background: var(--mediaNAVbgcolor);
+
+        position: relative;
+        z-index: -1;
+        border-radius: 20px 0 0 20px;
+
+
+
+    }
+
+    nav a.active::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 157px;
+        width: 20px;
+        height: 20px;
+        background: var(--bgcolor);
+
+        border-radius: 0 0 20px 0;
+
+    }
+
+    nav a.active::after {
+        content: "";
+        position: absolute;
+        top: 50px;
+        right: 8px;
+        width: 20px;
+        height: 20px;
+        background: var(--bgcolor);
+
+        border-radius: 0 20px 0 0;
+
+    }
+
+    nav a.active::before {
+        border-radius: 0 0 20px 0;
+        box-shadow: 5px 5px 0 2px var(--mediaNAVbgcolor);
+
+    }
+
+    nav a.active::after {
+        border-radius: 0 20px 0 0;
+        box-shadow: 5px -5px 0 2px var(--mediaNAVbgcolor);
+
+    }
+
+    #dropdown {
+        transition: all 0s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    }
+
+    .listOFcourse {
+        position: absolute;
+        top: 10px;
+        left: 200px;
+    }
+
+    .listOFcourse a {
+        font-size: 16px;
+        font-weight: bolder;
+        margin: 0;
+        line-height: 30px;
+        color: var(--wordcolor);
+        text-shadow: var(--lettershadow);
+
+    }
+
+    .carousel-indicators {
+        position: absolute;
+        top: 200px;
+
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+    }
+
+    article {
+        width: 100%;
+        position: relative;
+        top: -495px;
+    }
+
+    .container {
+        width: 100%;
+
+        background-image: url(./CADDIMG/section2img/430.png);
+        background-size: contain;
+        /* background-blend-mode: lighten; */
+        box-shadow: 0px 0px 7px black;
+
+    }
+
+
+    article .base .artBASE1 {
+
+        display: block;
+        /* padding: 20px; */
+        justify-content: center;
+        align-items: center;
+        text-shadow: var(--lettershadow);
+
+    }
+
+    article .base .artBASE1 .articalDIV1 div h1 {
+        width: 180px;
+        font-size: 2rem;
+        color: var(--wordcolor);
+        font-family: var(--fontFORhead);
+        border-bottom: 2px solid var(--wordcolor);
+        margin: 0 0 20px 0;
+
+    }
+
+    .articalDIV1 {
+        padding: 0 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    article .base .artBASE1 p {
+        width: 300px;
+        margin: 0 400px 0 0;
+        color: var(--wordcolor);
+        font-family: var(--fontFORhead);
+        font-size: 1.25rem;
+        margin: 0 0 20px 0;
+        text-align: justify;
+    }
+
+    article .base .artBASE1 .articalDIV1 h3 {
+
+        font-size: 1.25rem;
+        color: var(--wordcolor);
+        font-family: var(--fontFORhead);
+        margin: 0 0 20px 0;
+
+    }
+
+    article .base .artBASE1 .articalDIV2 {
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+    }
+
+    article iframe {
+        width: 100%;
+    }
+
+    article .base .artBASE2 {
+        display: block;
+        text-align: center;
+        font-family: var(--fontFORhead);
+        color: var(--wordcolor);
+        text-shadow: var(--lettershadow);
+    }
+
+    article .base .artBASE2 div {
+        padding: 50px;
+    }
+
+    article .base .artBASE2 div h1 {
+        color: red;
+    }
+
+    #formsection {
+        position: relative;
+        bottom: 200px;
+
+
+    }
+
+    #Locations h1 {
+        /* width: 200px; */
+        padding: 20px;
+    }
+
+    #Locations iframe {
+        padding: 20px;
+    }
+    #footer {
+        background: #f7f7f7;
+        padding: 3rem;
+    
+        padding-top: 7rem;
+        padding-bottom: 80px;
+        font-family: var(--fontFORhead);
+        background-image: url(./CADDIMG/footer/mediabg.png);
+        background-size: contain;
+    
+        margin-top: 10px;
+    
+    }
+    .footer-about {
+        width: 350px;
+    }
+    .fixer{
+        width: 410px;
+        height: 200px;
+        /* background-color: red; */
+        position: absolute;
+        top: 7970px;
+        font-family: var(--fontFORhead);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .8rem;
+    }
+}
+@media only screen and (max-width:375px) {
+    header{
+        width: 375px;
+        position: fixed;
+    }
+    .footer-about{
+        width: 300px;
+    }
+    #Locations{
+        width: 100%;
+    }
+    #Locations iframe{
+        width: 100%;
+        overflow: hidden;
+    }
+    #Locations h1{
+        width: 370px;
+    }
+    .base2 h3{
+        width: 300px;
+    }
+    .base3 h3{
+        width: 300px;
+    }
+    .social-links{
+      margin: 0 0 0 70px;
+    }
+    .fixer{
+        width: 375px;
+        height: 200px;
+        /* background-color: red; */
+        position: absolute;
+        top: 7970px;
+        font-family: var(--fontFORhead);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .8rem;
+    }
+}
+@media only screen and (max-width:360px) {
+    header{
+        width: 360px;
+        position: fixed;
+        /* background-color: red; */
+    }
+    .listOFcourse {
+        position: absolute;
+        top: 10px;
+        left: 180px;
+    }
+    #Locations{
+        width: 100%;
+    }
+    #Locations iframe{
+        width: 100%;
+        overflow: hidden;
+    }
+    #Locations h1{
+        width: 350px;
+    }
+    .base2 h3{
+        width: 300px;
+    }
+    .base3 h3{
+        width: 300px;
+    }
+    .fixer{
+        width: 360px;
+        height: 200px;
+        /* background-color: red; */
+        position: absolute;
+        top: 8050px;
+        font-family: var(--fontFORhead);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .8rem;
+    }
+    
+}
+@media only screen and (max-width:320px) {
+
+
+    .hambar {
+        transform: translateX(0px);
+
+    }
+
+    .hambar div {
+        display: block;
+
+    }
+
+    .come {
+        position: absolute;
+        top: 58px;
+        left: 0px;
+    }
+
+    .x {
+        /* position: absolute; */
+        /* top: 00px; */
+        /* left: 10px; */
+        transform: translateX(0px);
+        z-index: 2;
+    }
+
+    nav {
+        width: 200px;
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        font-family: var(--fontFORhead);
+        font-weight: bolder;
+        text-align: start;
+        background: var(--bgcolor);
+        padding: 10px 20px;
+        position: absolute;
+        top: 60px;
+        left: -400px;
+        z-index: 1;
+        transition: all;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+        border-right: 10px solid var(--hometitlebgcolor);
+    }
+
+    nav a {
+        width: 300px;
+        height: 50px;
+
+        text-decoration: none;
+        font-size: 19px;
+
+        letter-spacing: 2px;
+        position: relative;
+        text-align: start;
+        top: -100px;
+        line-height: 50px;
+        color: var(--wordcolor);
+        text-shadow: 0px 0px 10px #ffffff;
+        margin: 0 0 0 100px;
+
+    }
+
+    .logo {
+        background-image: url(./CADDIMG/);
+        filter: drop-shadow(0px 0px 25px #000000);
+        position: relative;
+        left: 50px;
+        cursor: pointer;
+    }
+
+    nav a.active {
+
+        width: 185px;
+        height: 50px;
+        display: block;
+        background: var(--mediaNAVbgcolor);
+
+        position: relative;
+        right: 40px;
+        z-index: -1;
+        border-radius: 20px 0 0 20px;
+
+
+
+    }
+
+    nav a.active::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 157px;
+        width: 20px;
+        height: 20px;
+        background: var(--bgcolor);
+
+        border-radius: 0 0 20px 0;
+
+    }
+
+    nav a.active::after {
+        content: "";
+        position: absolute;
+        top: 50px;
+        right: 8px;
+        width: 20px;
+        height: 20px;
+        background: var(--bgcolor);
+
+        border-radius: 0 20px 0 0;
+
+    }
+
+    nav a.active::before {
+        border-radius: 0 0 20px 0;
+        box-shadow: 5px 5px 0 2px var(--mediaNAVbgcolor);
+
+    }
+
+    nav a.active::after {
+        border-radius: 0 20px 0 0;
+        box-shadow: 5px -5px 0 2px var(--mediaNAVbgcolor);
+
+    }
+
+    #dropdown {
+        transition: all 0s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    }
+
+    .listOFcourse {
+        position: absolute;
+        top: 10px;
+        left: 230px;
+    }
+
+    .listOFcourse a {
+        font-size: 18px;
+        margin: 0;
+        line-height: 30px;
+    }
+
+    .carousel-indicators {
+        position: absolute;
+        top: 150px;
+
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+    }
+
+    article {
+        width: 100%;
+        position: relative;
+        top: -325px;
+    }
+
+    .container {
+        width: 100%;
+
+        background-image: url(./CADDIMG/section2img/430.png);
+        background-size: contain;
+        /* background-blend-mode: lighten; */
+        box-shadow: 0px 0px 7px black;
+
+    }
+
+    article .base .artBASE1 {
+
+        display: block;
+        /* padding: 20px; */
+        justify-content: center;
+        align-items: center;
+        text-shadow: var(--lettershadow);
+
+    }
+
+    article .base .artBASE1 .articalDIV1 div h1 {
+        width: 130px;
+        font-size: 1.50rem;
+        color: var(--wordcolor);
+        font-family: var(--fontFORhead);
+        border-bottom: 2px solid var(--wordcolor);
+        margin: 0 0 20px 0;
+        text-align: center;
+
+    }
+
+    .articalDIV1 {
+        padding: 0 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    article .base .artBASE1 p {
+        width: 300px;
+        margin: 0 400px 0 0;
+        color: var(--wordcolor);
+        font-family: var(--fontFORhead);
+        font-size: .8rem;
+        margin: 0 0 20px 0;
+        text-align: justify;
+        padding: 0 20px;
+    }
+
+    article .base .artBASE1 .articalDIV1 h3 {
+
+        font-size: 1rem;
+        color: var(--wordcolor);
+        font-family: var(--fontFORhead);
+        margin: 0 0 20px 0;
+        text-align: start;
+        width: 100%;
+
+    }
+
+    article .base .artBASE1 .articalDIV2 {
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+    }
+
+    article iframe {
+        width: 100%;
+    }
+
+    article .base .artBASE2 {
+        display: block;
+        text-align: center;
+        font-family: var(--fontFORhead);
+        color: var(--wordcolor);
+        text-shadow: var(--lettershadow);
+    }
+
+    article .base .artBASE2 div {
+        padding: 10px 50px;
+    }
+
+    article .base .artBASE2 div h1 {
+        color: red;
+    }
+
+    #Locations h1 {
+        /* width: 200px; */
+        padding: 20px;
+    }
+
+    #Locations iframe {
+        padding: 20px;
+    }
+}
