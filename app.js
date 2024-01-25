@@ -5,18 +5,18 @@ ham.addEventListener('click', myFunction)
 
 function myFunction() {
 
-    // change class for hambar to x mark converter 
-    var x = document.querySelector(".hambar")
-    x.classList.toggle("change");
-    // ab class for while clicking hambar fix in same position 
-    x.classList.toggle("x")
+  // change class for hambar to x mark converter 
+  var x = document.querySelector(".hambar")
+  x.classList.toggle("change");
+  // ab class for while clicking hambar fix in same position 
+  x.classList.toggle("x")
 
-    // come class is for nav slide from left 
-    var nav = document.getElementById("nav")
-    nav.classList.toggle("come")
-    // log id for while clickin hambar logo cant move fixed in same position 
-    let log = document.querySelector(".log")
-    log.id = "logfix"
+  // come class is for nav slide from left 
+  var nav = document.getElementById("nav")
+  nav.classList.toggle("come")
+  // log id for while clickin hambar logo cant move fixed in same position 
+  let log = document.querySelector(".log")
+  log.id = "logfix"
 
 }
 
@@ -29,34 +29,34 @@ var contect = document.getElementById("contect")
 var dropdown = document.getElementById('dropdown')
 
 home.addEventListener("click", () => {
-    home.classList.add("active")
-    about.classList.remove("active")
-    course.classList.remove("active")
-    contect.classList.remove("active")
-    dropdown.style.height = "0px"
+  home.classList.add("active")
+  about.classList.remove("active")
+  course.classList.remove("active")
+  contect.classList.remove("active")
+  dropdown.style.height = "0px"
 })
 
 about.addEventListener("click", () => {
-    home.classList.remove("active")
-    about.classList.add("active")
-    course.classList.remove("active")
-    contect.classList.remove("active")
-    dropdown.style.height = "0px"
+  home.classList.remove("active")
+  about.classList.add("active")
+  course.classList.remove("active")
+  contect.classList.remove("active")
+  dropdown.style.height = "0px"
 })
 course.addEventListener("click", () => {
-    home.classList.remove("active")
-    about.classList.remove("active")
-    course.classList.add("active")
-    contect.classList.remove("active")
+  home.classList.remove("active")
+  about.classList.remove("active")
+  course.classList.add("active")
+  contect.classList.remove("active")
 
-    dropdown.style.height = "147px"
+  dropdown.style.height = "147px"
 })
 contect.addEventListener("click", () => {
-    home.classList.remove("active")
-    about.classList.remove("active")
-    course.classList.remove("active")
-    contect.classList.add("active")
-    dropdown.style.height = "0px"
+  home.classList.remove("active")
+  about.classList.remove("active")
+  course.classList.remove("active")
+  contect.classList.add("active")
+  dropdown.style.height = "0px"
 })
 
 
@@ -107,11 +107,11 @@ function NextSlide() {
 
 }
 
-// setInterval(()=>{
-//     if(slidePosition==totalSlider-1){
-//       slidePosition=0;
-//     }else{
-//       slidePosition++;
-//     }
-//     updatePosition();
-//   },9000);
+setInterval(() => {
+  if (slidePosition == totalSlider - 1) {
+    slidePosition = 0;
+  } else {
+    slidePosition++;
+  }
+  updatePosition();
+}, 9000);

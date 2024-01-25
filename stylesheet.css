@@ -35,9 +35,9 @@ header {
     width: 100%;
     height: 60px;
     background: var(--bgcolor);
-  
+
     position: fixed;
-  
+
     border-bottom: 8px solid var(--hometitlebgcolor);
     z-index: 600;
 
@@ -154,7 +154,7 @@ nav a.active::after {
     z-index: 100;
 }
 
-.custom{
+.custom {
     position: absolute;
     top: 80px;
     left: 0;
@@ -198,7 +198,7 @@ nav a.active::after {
     letter-spacing: 1px;
     color: var(--wordcolor);
     text-shadow: var(--lettershadow);
-   
+
 }
 
 .listOFcourse a:hover {
@@ -1210,7 +1210,7 @@ a {
 }
 
 /* footer section end */
-.fixer{
+.fixer {
     width: 375px;
     height: 200px;
     /* background-color: red; */
@@ -1847,27 +1847,31 @@ a {
     #footer {
         background: #f7f7f7;
         padding: 3rem;
-    
+
         padding-top: 7rem;
         padding-bottom: 80px;
         font-family: var(--fontFORhead);
         background-image: url(./CADDIMG/footer/mediabg.png);
         background-size: contain;
-    
+
         margin-top: 10px;
-    
+
     }
-    .footerlogo{
+
+    .footerlogo {
         width: 200px;
     }
-    .col-md-3{
+
+    .col-md-3 {
         margin: 50px 0;
     }
+
     .row {
         display: block;
         justify-content: space-evenly;
         align-items: center;
     }
+
     .social-links {
         display: flex;
         /* flex-direction: column; */
@@ -1876,7 +1880,8 @@ a {
         position: relative;
         left: -170px;
     }
-    .social-icons{
+
+    .social-icons {
         position: relative;
         left: 30px;
     }
@@ -1884,11 +1889,11 @@ a {
 }
 
 @media all and (max-width:430px) {
-   
-    header{
+
+    header {
         width: 430px;
     }
-    
+
     .hambar {
         transform: translateX(-70px);
     }
@@ -2028,8 +2033,8 @@ a {
     .listOFcourse a {
         font-size: 18px;
         margin: 0;
-color: var(--wordcolor);
-text-shadow: var(--lettershadow);
+        color: var(--wordcolor);
+        text-shadow: var(--lettershadow);
         line-height: 30px;
     }
 
@@ -2302,7 +2307,7 @@ text-shadow: var(--lettershadow);
 
 
     .base3 h3 {
-        width: 400px;
+        width: 300px;
         font-size: 1rem;
         /* font-weight: lighter; */
         position: relative;
@@ -2480,23 +2485,26 @@ text-shadow: var(--lettershadow);
     #Locations iframe {
         padding: 20px;
     }
+
     #footer {
         background: #f7f7f7;
         padding: 3rem;
-    
+
         padding-top: 7rem;
         padding-bottom: 80px;
         font-family: var(--fontFORhead);
         background-image: url(./CADDIMG/footer/1000.png);
         background-size: cover;
-    
+
         margin-top: 10px;
-    
-    
+
+
     }
-    .footer-about{
+
+    .footer-about {
         width: 340px;
     }
+
     .social-links {
         display: flex;
         /* flex-direction: column; */
@@ -2505,11 +2513,13 @@ text-shadow: var(--lettershadow);
         position: relative;
         left: -120px;
     }
-    .social-icons{
+
+    .social-icons {
         position: relative;
         left: 30px;
     }
-    .fixer{
+
+    .fixer {
         width: 430px;
         height: 200px;
         /* background-color: red; */
@@ -2528,10 +2538,10 @@ text-shadow: var(--lettershadow);
 }
 
 @media only screen and (max-width: 414px) {
-  
-header{
-    width: 414px;
-}
+
+    header {
+        width: 414px;
+    }
 
     .hambar {
         transform: translateX(-70px);
@@ -2676,7 +2686,8 @@ header{
 
     }
 
-    .base2 h3,.base3 h3{
+    .base2 h3,
+    .base3 h3 {
         width: 300px;
     }
 
@@ -2794,23 +2805,26 @@ header{
     #Locations iframe {
         padding: 20px;
     }
+
     #footer {
         background: #f7f7f7;
         padding: 3rem;
-    
+
         padding-top: 7rem;
         padding-bottom: 80px;
         font-family: var(--fontFORhead);
         background-image: url(./CADDIMG/footer/mediabg.png);
         background-size: contain;
-    
+
         margin-top: 10px;
-    
+
     }
+
     .footer-about {
-        width: 350px;
+        width: 340px;
     }
-    .fixer{
+
+    .fixer {
         width: 410px;
         height: 200px;
         /* background-color: red; */
@@ -2824,40 +2838,50 @@ header{
         font-size: .8rem;
     }
 }
-@media only screen and (max-width:390px){
-    header{
+
+@media only screen and (max-width:390px) {
+    header {
         width: 390px;
     }
-    
+
 }
+
 @media only screen and (max-width:375px) {
-    header{
+    header {
         width: 375px;
         position: fixed;
     }
-    .footer-about{
+
+    .footer-about {
         width: 300px;
     }
-    #Locations{
+
+    #Locations {
         width: 100%;
     }
-    #Locations iframe{
+
+    #Locations iframe {
         width: 100%;
         overflow: hidden;
     }
-    #Locations h1{
+
+    #Locations h1 {
         width: 370px;
     }
-    .base2 h3{
+
+    .base2 h3 {
         width: 300px;
     }
-    .base3 h3{
+
+    .base3 h3 {
         width: 300px;
     }
-    .social-links{
-      margin: 0 0 0 70px;
+
+    .social-links {
+        margin: 0 0 0 70px;
     }
-    .fixer{
+
+    .fixer {
         width: 375px;
         height: 200px;
         /* background-color: red; */
@@ -2871,34 +2895,42 @@ header{
         font-size: .8rem;
     }
 }
+
 @media only screen and (max-width:360px) {
-    header{
+    header {
         width: 360px;
         position: fixed;
         /* background-color: red; */
     }
+
     .listOFcourse {
         position: absolute;
         top: 10px;
         left: 180px;
     }
-    #Locations{
+
+    #Locations {
         width: 100%;
     }
-    #Locations iframe{
+
+    #Locations iframe {
         width: 100%;
         overflow: hidden;
     }
-    #Locations h1{
+
+    #Locations h1 {
         width: 350px;
     }
-    .base2 h3{
+
+    .base2 h3 {
         width: 300px;
     }
-    .base3 h3{
+
+    .base3 h3 {
         width: 300px;
     }
-    .fixer{
+
+    .fixer {
         width: 360px;
         height: 200px;
         /* background-color: red; */
@@ -2911,8 +2943,9 @@ header{
         align-items: center;
         font-size: .8rem;
     }
-    
+
 }
+
 @media only screen and (max-width:320px) {
 
 
