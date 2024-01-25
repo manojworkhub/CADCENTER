@@ -141,7 +141,7 @@ nav a.active::after {
 
 .logo {
     background-image: url(./CADDIMG/);
-    filter: drop-shadow(-2px -0px 3px #000000);
+    filter: drop-shadow(-2px -0px 3px white);
     position: relative;
     left: 200px;
     cursor: pointer;
@@ -1224,7 +1224,47 @@ a {
     font-size: .8rem;
     display: none;
 }
+@media all and (max-width:1366px){
+    .listOFcourse{
+        position: relative;
+        left:1050px ;
+    }
+}
+@media all and (max-width:1080px) {
+    header .logo{
+        position: relative;
+        left: 100px;
+    }
+  
+    article .base .artBASE1 .articalDIV2 iframe{
+        width: 100%;
+    }
+    .listOFcourse{
+        position: relative;
+        left:800px ;
+    }
+    #cardsection .card{
+        width: 230px;
+    }
+    .useful-link{
 
+        width: 130px;
+    }
+    .social-links{
+        width: 200px;
+   
+       
+    }
+    .address h2{
+        position: relative;
+        top: 20px;
+    }
+    .address{
+     
+        width: 300px;
+        line-height: 0px;
+    }
+}
 
 
 @media all and (max-width:600px) {
@@ -1292,7 +1332,7 @@ a {
 
     .logo {
         background-image: url(./CADDIMG/);
-        filter: drop-shadow(0px 0px 25px #000000);
+        filter: drop-shadow(0px 0px 25px #ffffff);
         position: relative;
         left: 150px;
         cursor: pointer;
@@ -1960,7 +2000,7 @@ a {
 
     .logo {
         background-image: url(./CADDIMG/);
-        filter: drop-shadow(0px 0px 25px #000000);
+        filter: drop-shadow(0px 0px 25px #ffffff);
         position: relative;
         left: 50px;
         cursor: pointer;
@@ -2511,7 +2551,7 @@ a {
         align-items: center;
         justify-content: center;
         position: relative;
-        left: -120px;
+        left: -55px;
     }
 
     .social-icons {
@@ -2607,7 +2647,7 @@ a {
 
     .logo {
         background-image: url(./CADDIMG/);
-        filter: drop-shadow(0px 0px 25px #000000);
+        filter: drop-shadow(0px 0px 25px #ffffff);
         position: relative;
         left: 70px;
         cursor: pointer;
@@ -2822,6 +2862,12 @@ a {
 
     .footer-about {
         width: 340px;
+       
+    }
+    .social-links{
+        /* border: 2px solid red; */
+        position: relative;
+        left: -55px;
     }
 
     .fixer {
@@ -2843,13 +2889,121 @@ a {
     header {
         width: 390px;
     }
-
+ .fixer{
+    width: 380px;
+ }
 }
 
 @media only screen and (max-width:375px) {
     header {
         width: 375px;
         position: fixed;
+    }
+    .hambar{
+        padding: 0 0 0 20px;
+    }
+    nav {
+        width: 300px;
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        font-family: var(--fontFORhead);
+        font-weight: bolder;
+        text-align: start;
+        background: var(--bgcolor);
+        padding: 10px 20px;
+        position: absolute;
+        top: 60px;
+        left: -400px;
+        margin: 30px 0 0 0;
+        /* border: 2px solid red; */
+        z-index: 1;
+        transition: all;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+        border-right: 10px solid var(--mediaNAVbgcolor);
+    }
+
+    nav a {
+        width: 300px;
+        height: 50px;
+
+        text-decoration: none;
+        font-size: 1rem;
+
+        letter-spacing: 5px;
+        position: relative;
+        text-align: start;
+        top: -190px;
+        line-height: 50px;
+        color: var(--wordcolor);
+        text-shadow: var(--lettershadow);
+        margin: 0 0 0 100px;
+
+    }
+
+    .logo {
+      
+        filter: drop-shadow(0px 0px 25px #ffffff);
+        position: relative;
+        left: 150px;
+        cursor: pointer;
+        padding: 0 40px 0 0;
+        
+    }
+
+    nav a.active {
+
+        width: 200px;
+        height: 50px;
+        display: block;
+        background: var(--mediaNAVbgcolor);
+
+        position: relative;
+        z-index: -1;
+        border-radius: 20px 0 0 20px;
+
+
+
+    }
+
+    nav a.active::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 175px;
+        width: 20px;
+        height: 20px;
+        background: var(--bgcolor);
+
+        border-radius: 0 0 20px 0;
+
+    }
+
+    nav a.active::after {
+        content: "";
+        position: absolute;
+        top: 50px;
+        right: 5px;
+        width: 20px;
+        height: 20px;
+        background: var(--bgcolor);
+
+        border-radius: 0 20px 0 0;
+
+    }
+
+    nav a.active::before {
+        border-radius: 0 0 20px 0;
+        box-shadow: 5px 5px 0 2px var(--mediaNAVbgcolor);
+
+    }
+
+    nav a.active::after {
+        border-radius: 0 20px 0 0;
+        box-shadow: 5px -5px 0 2px var(--mediaNAVbgcolor);
+
     }
 
     .footer-about {
@@ -2877,9 +3031,7 @@ a {
         width: 300px;
     }
 
-    .social-links {
-        margin: 0 0 0 70px;
-    }
+   
 
     .fixer {
         width: 375px;
@@ -2901,6 +3053,14 @@ a {
         width: 360px;
         position: fixed;
         /* background-color: red; */
+     
+    }
+    .hambar{
+        position: relative;
+        left: 20px;
+    }
+    .logo{
+        padding-right: 50px;
     }
 
     .listOFcourse {
@@ -3014,7 +3174,7 @@ a {
 
     .logo {
         background-image: url(./CADDIMG/);
-        filter: drop-shadow(0px 0px 25px #000000);
+        filter: drop-shadow(0px 0px 25px #ffffff);
         position: relative;
         left: 50px;
         cursor: pointer;
