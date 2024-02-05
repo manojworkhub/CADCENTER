@@ -1,5 +1,5 @@
 body {
-
+     overflow-x: hidden;
     /* background-color: var(--bodycolr2); */
 
 }
@@ -1231,6 +1231,14 @@ a {
     }
 }
 @media all and (max-width:1080px) {
+    body{
+        overflow-x: hidden;
+      
+    }
+    nav a{
+        font-size: 14px;
+      
+    }
     header .logo{
         position: relative;
         left: 100px;
